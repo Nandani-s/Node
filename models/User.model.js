@@ -1,0 +1,30 @@
+import mongoose from "mongoose";
+const user = new mongoose.Schema({
+	name:{
+		type:String,
+		required:true,
+	},
+	email:{	
+		type:String,
+		required:true,
+		unique:true,
+		lowwercase:true,
+	},
+	password:{
+		type:String,
+		required:true,
+	},
+	age:{
+		type:Number,
+		required:true,
+		max:18,
+	},
+	isActive:{
+		type:Boolean,
+		default:true,
+	},
+	createdAt:{
+		type:Date,
+		default:Date.now,
+	},   
+})	
