@@ -19,12 +19,11 @@ const user = new mongoose.Schema({
 		required:true,
 		max:18,
 	},
-	isActive:{
-		type:Boolean,
-		default:true,
-	},
-	createdAt:{
-		type:Date,
-		default:Date.now,
-	},   
-})	
+	
+	role:{
+	type:String,
+	enum:["admin","user"],
+	default:"user"
+	}
+},{timestamps:true});	
+export const User= mongoose.model("user",user)
