@@ -24,6 +24,10 @@ const user = new mongoose.Schema({
 	type:String,
 	enum:["admin","user"],
 	default:"user"
+	},
+	avatar:{
+		type:String,
+		
 	}
 },{timestamps:true});	
 export const User= mongoose.model("user",user) 
