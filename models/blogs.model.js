@@ -17,6 +17,10 @@ const blog = new mongoose.Schema({
 	author: {
 		type: String,
 		required: true
+	},
+	readtime:{
+		type: Number,
+		required: true
 	}
 
 	

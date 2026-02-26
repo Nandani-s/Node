@@ -17,7 +17,7 @@ const user = new mongoose.Schema({
 	age:{
 		type:Number,
 		required:true,
-		max:18,
+		max:100,
 	},
 	
 	role:{
@@ -26,4 +26,4 @@ const user = new mongoose.Schema({
 	default:"user"
 	}
 },{timestamps:true});	
-export const User= mongoose.model("user",user)
+export const User= mongoose.model("user",user) 
